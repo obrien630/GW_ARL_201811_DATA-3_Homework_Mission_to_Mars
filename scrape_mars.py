@@ -109,10 +109,6 @@ def marsHemisphereImages():
     browser.visit(url)
     time.sleep(5)
     
-    html = browser.html
-    soup = BeautifulSoup(html, 'html.parser')
-    time.sleep(5)
-    
     first_product = browser.find_by_tag('h3')[0].text
     time.sleep(5)
     second_product = browser.find_by_tag('h3')[1].text
@@ -148,7 +144,8 @@ def marsHemisphereImages():
                        {'title':third_product, 'hem_url': third_prod_img},
                        {'title':fourth_product,'hem_url':fourth_prod_img}]
     
+  
+    return mars_hemispheres
+
     closeBrowser(browser)
     time.sleep(10)
-
-    return mars_hemispheres
