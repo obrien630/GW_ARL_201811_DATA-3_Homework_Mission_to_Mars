@@ -36,7 +36,7 @@
                 <h2>Latest Mars News</h2>
                 <hr>
                 <h3>{{news_title}}</h3>
-                <p> {{paragraph_text}}</p>
+                <p>{{news_paragraph}}</p>
                 
                 <br>
             {% else %}
@@ -53,7 +53,7 @@
             <h3>Featured Mars Image</h3>
             <hr>
             <figure>
-                <img src={{featured_image}} alt="Featured image for NASA mars page">
+                <img src={{featured_image_url}} alt="Featured image for NASA mars page">
             </figure>
         </div>
         <div class='col-md-4'>
@@ -82,28 +82,28 @@
     <div class="row">
         <div class='col-md-6'>
             <figure>
-                <figcaption class="hemisphere_caption"> {{hemisphere_title_1}} </figcaption>
-                <img src={{hemisphere_img_1}} alt="Mars hemisphere 1">
+                <figcaption class="hemisphere_caption"> {{hemisphere_title1}} </figcaption>
+                <img src={{hemisphere_img1}} alt="Mars hemisphere 1">
             </figure>
         </div>
         <div class='col-md-6'>
             <figure>
-                <figcaption class="hemisphere_caption"> {{hemisphere_title_2}} </figcaption>
-                <img src={{hemisphere_img_2}} alt="Mars hemisphere 2">
+                <figcaption class="hemisphere_caption"> {{hemisphere_title2}} </figcaption>
+                <img src={{hemisphere_img2}} alt="Mars hemisphere 2">
             </figure>
         </div>
     </div>
     <div class="row">
         <div class='col-md-6'>
             <figure>
-                <figcaption class="hemisphere_caption"> {{hemisphere_title_3}} </figcaption>
-                <img src={{hemisphere_img_3}} alt="Mars hemisphere 3">
+                <figcaption class="hemisphere_caption"> {{hemisphere_title3}} </figcaption>
+                <img src={{hemisphere_img3}} alt="Mars hemisphere 3">
             </figure>
         </div>
         <div class='col-md-6'>
             <figure>
-                <figcaption class="hemisphere_caption"> {{hemisphere_title_4}} </figcaption>
-                <img src={{hemisphere_img_4}} alt="Mars hemisphere 4">
+                <figcaption class="hemisphere_caption"> {{hemisphere_title4}} </figcaption>
+                <img src={{hemisphere_img4}} alt="Mars hemisphere 4">
             </figure>
         </div>
     </div>

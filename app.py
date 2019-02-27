@@ -13,12 +13,37 @@ mongo = PyMongo(app)
 @app.route("/")
 def index():
 
-    mars_data = mongo.db.collection.find()
+    mars_data = mongo.db.collection.find_one()
       
-    print(mars_data) 
+    news_title = mars_data["news_data"]["news_title"]
+    news_paragraph = mars_data["news_data"],["paragraph_text"]
+    featured_image_url = mars_data["mars_featured_image"]
+    mars_weather = mars_data["mars_weather"]
+    mars_facts_table = mars_data["mars_facts_table"]
+    hemisphere_title1 = mars_data["mars_hemispheres"][0]["title"]
+    hemisphere_img1 = mars_data["mars_hemispheres"][0]["hem_url"]
+    hemisphere_title2 = mars_data["mars_hemispheres"][1]["title"]
+    hemisphere_img2 = mars_data["mars_hemispheres"][1]["hem_url"]
+    hemisphere_title3 = mars_data["mars_hemispheres"][2]["title"]
+    hemisphere_img3 = mars_data["mars_hemispheres"][2]["hem_url"]
+    hemisphere_title4 = mars_data["mars_hemispheres"][3]["title"]
+    hemisphere_img4 = mars_data["mars_hemispheres"][3]["hem_url"] 
     
     # return template and data
-    return render_template("index.html", mars_data=mars_data)  
+    return render_template("index.html", mars_data=mars_data,
+    news_title = news_title,
+    news_paragraph = news_paragraph,
+    featured_image_url = featured_image_url,
+    mars_weather = mars_weather,
+    mars_facts_table = mars_facts_table,
+    hemisphere_title1 = hemisphere_title1,
+    hemisphere_img1 = hemisphere_img1,
+    hemisphere_title2 = hemisphere_title2,
+    hemisphere_img2 = hemisphere_img2,
+    hemisphere_title3 = hemisphere_title3,
+    hemisphere_img3 = hemisphere_img3,
+    hemisphere_title4 = hemisphere_title4,
+    hemisphere_img4 = hemisphere_img4)  
 
 # Route that will trigger scrape functions
 @app.route("/scrape")
